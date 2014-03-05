@@ -1,0 +1,66 @@
+//== Media queries breakpoints
+//
+//## Define the breakpoints at which your layout will change, adapting to different screen sizes.
+
+// Extra small screen / phone
+// Note: Deprecated $screen-xs and $screen-phone as of v3.0.1
+$screen-xs:                  480px !default;
+$screen-xs-min:              $screen-xs !default;
+
+// Small screen / tablet
+// Note: Deprecated $screen-sm and $screen-tablet as of v3.0.1
+$screen-sm:                  768px !default;
+$screen-sm-min:              $screen-sm !default;
+
+// Medium screen / desktop
+// Note: Deprecated $screen-md and $screen-desktop as of v3.0.1
+$screen-md:                  992px !default;
+$screen-md-min:              $screen-md !default;
+
+// Large screen / wide desktop
+// Note: Deprecated $screen-lg and $screen-lg-desktop as of v3.0.1
+$screen-lg:                  1200px !default;
+$screen-lg-min:              $screen-lg !default;
+
+// So media queries don't overlap when required, provide a maximum
+$screen-xs-max:              ($screen-sm-min - 1) !default;
+$screen-sm-max:              ($screen-md-min - 1) !default;
+$screen-md-max:              ($screen-lg-min - 1) !default;
+
+
+@mixin breakpoint($point) {
+  @if $point == xs {
+    @media only screen and (min-width: $screen-xs-min) { @content; }
+  }
+  @else if $point == sm {
+    @media only screen and (min-width: $screen-sm-min) { @content; }
+  }
+  @else if $point == md {
+    @media only screen and (min-width: $screen-md-min) { @content; }
+  }
+  @else if $point == lg {
+    @media only screen and (min-width: $screen-lg-min) { @content; }
+  }
+}
+
+
+// Use rem units where available, otherwise use px
+@mixin font-size($sizeValue: 1.6){
+  font-size: ($sizeValue * 15) + px;
+  font-size: $sizeValue + rem;
+}
+
+@mixin line-height($sizeValue: 1.6){
+  line-height: ($sizeValue * 15) + px;
+  line-height: $sizeValue + rem;
+}
+
+
+$brand-color: #fff;
+$brand-color-hover: #fff;
+
+$header-bg-color: #0A192D;
+$header-nav-color: #fff;
+$header-nav-color-bg: transparent;
+$header-nav-color-hover: #fff;
+$header-nav-color-bg-hover: #2f4961;

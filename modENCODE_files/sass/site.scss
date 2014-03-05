@@ -1,0 +1,126 @@
+@import "compass";
+@import "mixins";
+
+
+header {
+  background-color: $header-bg-color;
+}
+
+
+h2 {
+  margin-top: 80px;
+  margin-bottom: 20px;
+}
+
+
+.navbar {
+  margin-bottom: 0;
+
+  .pull-right {
+    float: none !important;
+
+    @include breakpoint(sm) {
+      float: right !important;
+    }
+  }
+}
+
+
+.navbar-default {
+  .navbar-brand {
+    color: $brand-color;
+    @include font-size(2.3);
+    font-weight: bold;
+    @include transition(all 200ms);
+
+    &:hover {
+      color: $brand-color-hover;
+      @include text-shadow(0 0 16px #fff);
+    }
+  }
+}
+
+
+.navbar-default {
+  background-color: transparent;
+  border: none;
+}
+
+
+.navbar-default {
+  .navbar-nav {
+    > li {
+      > a {
+        display: block;
+        padding: 10px 0;
+        color: $header-nav-color;
+        background-color: $header-nav-color-bg;
+        @include font-size(1.5);
+        text-align: left;
+        @include transition(background-color 500ms);
+
+        @include breakpoint(sm) {
+          @include font-size(1.2);
+          @include line-height(1.4);
+          text-align: center;
+        }
+
+        br {
+          content: ' ';
+
+          &:after {
+            content: ' ';
+          }
+
+          @include breakpoint(sm) {
+            content: none;
+          }
+        }
+
+        &:hover {
+          color: $header-nav-color-hover;
+          background-color: $header-nav-color-bg-hover;
+          @include transition(background-color 0);
+        }
+
+        span {
+          display: block;
+          padding: 0 15px;
+        }
+      }
+
+      span {
+        border-left: none;
+
+        @include breakpoint(sm) {
+          border-left: 1px solid $header-nav-color;
+        }
+      }
+
+      &:first-child span {
+        border-left: none;
+      }
+    }
+  }
+
+  .navbar-toggle {
+    border: none;
+
+    &:hover {
+      background-color: transparent;
+    }
+
+    .icon-bar {
+      height: 4px;
+    }
+  }
+}
+
+
+.table-responsive {
+  width: 100%;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  -webkit-overflow-scrolling: touch;
+}

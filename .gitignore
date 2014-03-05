@@ -2,3 +2,7 @@
 mencode.sublime-workspace
 
 mencode.sublime-project
+
+*.scssc
+
+node_modules/*
