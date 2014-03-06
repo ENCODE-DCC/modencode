@@ -41,6 +41,30 @@ h2 {
 }
 
 
+.table-striped>tbody>tr:nth-child(odd)>th {
+    background-color: #CCCCFF;
+    text-align: center;
+}
+
+.table-bordered>tbody>tr>th {
+    border-left: 1px solid #fff;
+    border-right: 1px solid #fff;
+}
+
+.table-bordered>tbody>tr>th:first-child,
+.table-bordered>tbody>tr>th:last-child {
+    border-left: 1px solid #ddd;
+}
+
+.table-striped>tbody>tr:nth-child(odd)>td {
+  background-color: #e8e8e8;
+}
+
+.table-striped>tbody>tr:nth-child(even)>td {
+  background-color: #f8f8f8;
+}
+
+
 .navbar-default {
   background-color: transparent;
   border: none;
@@ -50,7 +74,12 @@ h2 {
 .navbar-default {
   .navbar-nav {
     > li {
-      > a {
+      > a:focus {
+        outline: none;
+      }
+
+      > a,
+      > a:visited {
         display: block;
         padding: 10px 0;
         color: $header-nav-color;
@@ -122,6 +151,46 @@ h2 {
 
 .navbar-collapse {
   border-top: none;
+}
+
+
+.nav-tabs {
+  text-align: center;
+  vertical-align: top;
+  border-bottom: none;
+
+  > li {
+    display: inline-block;
+    float: none;
+    vertical-align: top;
+    background-color: #f0f0f0;
+
+    &.active {
+      > a,
+      > a:focus {
+        border: none;
+        background-color: #ccccff;
+        @include border-radius(0);
+
+        &:hover {
+          border: none;
+          background-color: #ccccff;
+        }
+      }
+    }
+
+    > a {
+      border: none;
+      font-weight: bold;
+      color: #000;
+      @include transition(background-color 200ms);
+
+      &:hover {
+        @include transition(background-color 0);
+        background-color: #e0e0e0;
+      }
+    }
+  }
 }
 
 

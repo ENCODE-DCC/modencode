@@ -1,11 +1,16 @@
-
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"><head>
+<!DOCTYPE html>
+<html class="no-js">
+<head>
 <title>modENCODE Comparison:RNA</title>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<script src="modENCODE_files/js/modernizr.min.js"></script>
 
 <link rel="stylesheet" href="modENCODE_files/css/bootstrap.min.css" type="text/css" media="screen,projection">
 <link rel="stylesheet" href="modENCODE_files/css/site.css" type="text/css" media="screen,projection">
+
+<!--[if lt IE 9]>
+<link rel="stylesheet" href="modENCODE_files/css/ie.css" type="text/css" media="all" />
+<![endif]-->
 
 </head>
 
@@ -44,8 +49,15 @@
   </header>
 
   <div class="container">
-    <div class="row">
 
+    <ul class="nav nav-tabs">
+      <li class="active"><a href="#fly" data-toggle="tab">Fly Data</a></li>
+      <li><a href="#worm" data-toggle="tab">Worm Data</a></li>
+      <li><a href="#human" data-toggle="tab">Human Data</a></li>
+    </ul>
+
+<div class="tab-content">
+  <div class="tab-pane active" id="fly">
     <h2>Fly Data for the Comparative ENCODE RNA resource</h2>
 
     <div class="table-responsive">
@@ -534,7 +546,10 @@ http://data.modencode.org/cgi-bin/findFiles.cgi?download=4691 </td></tr>
 </table>
 
   </div> <!-- /.table-responsive -->
+</div> <!-- /.tab-pane -->
 
+
+<div class="tab-pane" id="worm">
 
 <h2>Worm Data for the Comparative ENCODE RNA resource</h2>
 
@@ -795,6 +810,10 @@ fragment library</td><td>&nbsp;</td><td>L2</td><td>hermaphrodite</td><td>combine
 
   </div> <!-- /.table-responsive -->
 
+</div> <!-- /.tab-pane -->
+
+
+<div class="tab-pane" id="human">
 
     <h2>Human Data for the Comparative ENCODE RNA resource</h2>
 
@@ -1010,7 +1029,8 @@ fragment library</td><td>&nbsp;</td><td>L2</td><td>hermaphrodite</td><td>combine
  </tbody></table>
 
    </div> <!-- /.table-responsive -->
-  </div> <!-- /.row -->
+ </div> <!-- /.tab-pane -->
+</div> <!-- /.tab-content -->
 </div> <!-- /.container for main content -->
 
 

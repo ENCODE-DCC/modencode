@@ -1,0 +1,40 @@
+@import "compass";
+@import "mixins";
+
+
+.navbar {
+  .pull-right {
+    float: right !important;
+  }
+}
+
+
+.navbar-default {
+  .navbar-nav {
+    > li {
+      > a {
+        @include font-size(1.2);
+        @include line-height(1.4);
+        text-align: center;
+      }
+
+      span {
+        border-left: 1px solid $header-nav-color;
+      }
+    }
+  }
+}
+
+
+#footer-links {
+  ul {
+    text-align: left;
+  }
+}
+
+
+#footer-logos {
+  ul {
+    text-align: right;
+  }
+}
