@@ -6,3 +6,4 @@ mencode.sublime-project
 *.scssc
 
 node_modules/*
+modENCODE_files/css/site.css
